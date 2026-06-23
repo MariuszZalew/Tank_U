@@ -1,0 +1,155 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+    color: #eee;
+}
+
+/* ===== GAME CONTAINER ===== */
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #4ecca3;
+    text-shadow: 0 0 10px rgba(78, 204, 163, 0.5);
+}
+
+/* ===== INFO BAR ===== */
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background: #16213e;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.info-bar span {
+    color: #4ecca3;
+    font-weight: bold;
+}
+
+/* ===== CANVAS ===== */
+canvas {
+    border: 3px solid #4ecca3;
+    border-radius: 8px;
+    background: #0f3460;
+    box-shadow: 0 0 20px rgba(78, 204, 163, 0.3);
+}
+
+/* ===== CONTROLS INFO ===== */
+.controls {
+    margin-top: 15px;
+    padding: 15px;
+    background: #16213e;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.controls kbd {
+    background: #0f3460;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #4ecca3;
+    color: #4ecca3;
+}
+
+/* ===== START SCREEN ===== */
+.start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(22, 33, 62, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid #4ecca3;
+    text-align: center;
+    display: block;
+}
+
+.start-screen h2 {
+    color: #4ecca3;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(78, 204, 163, 0.5);
+}
+
+.start-screen p {
+    font-size: 16px;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+}
+
+.start-screen button {
+    padding: 12px 40px;
+    background: #4ecca3;
+    border: none;
+    border-radius: 6px;
+    color: #1a1a2e;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.start-screen button:hover {
+    background: #3ba887;
+    transform: scale(1.05);
+}
+
+/* ===== GAME OVER OVERLAY ===== */
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(22, 33, 62, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid #e94560;
+    text-align: center;
+    display: none;
+}
+
+.game-over h2 {
+    color: #e94560;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.game-over p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.game-over button {
+    padding: 12px 30px;
+    background: #4ecca3;
+    border: none;
+    border-radius: 6px;
+    color: #1a1a2e;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.game-over button:hover {
+    background: #3ba887;
+    transform: scale(1.05);
+}
