@@ -2,16 +2,16 @@
 
 ## Systems
 
-| **Entry / Boot** | `main.js` — DOM init, game start/restart orchestration, sound registration |
-| **State Store** | `state.js` — single shared mutable state (tanks, bullets, particles, power-ups, UI values, input) with getter/setter functions |
-| **Input** | `input.js` — keyboard + mouse handlers; manages WASD/cursor keys, space to shoot, targeting mode (auto/manual), and restart triggers |
-| **Game Loop & Render Pipeline** | `loop.js` — `requestAnimationFrame(rAF)` loop: filter dead entities → update/draw power-ups → tanks → bullets → particles → collisions, with screen shake applied around the render pass |
-| **Rendering** | `render.js` — background canvas fill + grid lines; screen shake helper that applies random translate offset to the ctx |
-| **Game Objects (Classes)** | `tank.js` — Tank class (player + enemy AI, health, aim logic, shooting, detailed drawing); `bullet.js` — Bullet class with trail/aging/pulse visuals; `particle.js` — Particle spawn/drift/fade for explosions; `powerup.js` — PowerUp floating pickups (bob animation, fade-out, 6 types) |
-| **Collision Detection** | `collisions.js` — bullet↔tank hit resolution (damage, lives, respawning, scoring); player↔power-up collection; spawns explosions and triggers sound/UI side effects |
-| **Wave / Spawning System** | `waves.js` — progressive enemy count per wave, random edge spawning, elite chance (20%), wave-advance detection via tank array filtering |
-| **Sound** | `sound.js` — Web Audio API synth: oscillator tones + white noise bursts for player shoot, enemy shoot, hit, explosion, player death, wave complete, game over, start fanfare |
-| **UI / HUD** | `ui.js` — reactive score/high-score/lives/wave update; incrementScore shortcut; game-over handling with localStorage persistence |
+- **Entry / Boot** (`main.js`) — DOM init, game start/restart orchestration, sound registration
+- **State Store** (`state.js`) — single shared mutable state (tanks, bullets, particles, power-ups, UI values, input) with getter/setter functions
+- **Input** (`input.js`) — keyboard + mouse handlers; manages WASD/cursor keys, space to shoot, targeting mode (auto/manual), and restart triggers
+- **Game Loop & Render Pipeline** (`loop.js`) — `requestAnimationFrame(rAF)` loop: filter dead entities → update/draw power-ups → tanks → bullets → particles → collisions, with screen shake applied around the render pass
+- **Rendering** (`render.js`) — background canvas fill + grid lines; screen shake helper that applies random translate offset to the ctx
+- **Game Objects (Classes)** (`tank.js`, `bullet.js`, `particle.js`, `powerup.js`) — Tank class (player + enemy AI, health, aim logic, shooting, detailed drawing); Bullet class with trail/aging/pulse visuals; Particle spawn/drift/fade for explosions; PowerUp floating pickups (bob animation, fade-out, 6 types)
+- **Collision Detection** (`collisions.js`) — bullet↔tank hit resolution (damage, lives, respawning, scoring); player↔power-up collection; spawns explosions and triggers sound/UI side effects
+- **Wave / Spawning System** (`waves.js`) — progressive enemy count per wave, random edge spawning, elite chance (20%), wave-advance detection via tank array filtering
+- **Sound** (`sound.js`) — Web Audio API synth: oscillator tones + white noise bursts for player shoot, enemy shoot, hit, explosion, player death, wave complete, game over, start fanfare
+- **UI / HUD** (`ui.js`) — reactive score/high-score/lives/wave update; incrementScore shortcut; game-over handling with localStorage persistence
 
 ## Key Files
 
