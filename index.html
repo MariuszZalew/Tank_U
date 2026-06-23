@@ -15,6 +15,13 @@
             <div>High Score: <span id="highScore">0</span></div>
             <div>Lives: <span id="lives">3</span></div>
             <div>Wave: <span id="wave">1</span></div>
+            <!-- Ability indicator -->
+            <div class="ability-card" title="Press SHIFT for a brief emergency shield (0.8s invincibility).">
+                <!-- <span class="key-badge">SHIFT</span>  -->
+                <span id="shieldLabel">SHIELD</span>
+                <span id="shieldStatus">READY</span>
+                <div class="cooldown-container"><div id="shieldCooldown"></div></div>
+            </div>
         </div>
 
         <canvas id="gameCanvas" width="800" height="600"></canvas>
@@ -22,11 +29,25 @@
         <div class="start-screen" id="startScreen">
             <h2>TANK BATTLE</h2>
             <p>Defeat all enemies to advance through waves!</p>
+            
+            <div class="targeting-options">
+                <h3>Targeting Mode:</h3>
+                <label class="radio-option">
+                    <input type="radio" name="targetingMode" value="auto" checked>
+                    <span>Auto-targeting (aim at nearest enemy when mouse stops)</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="targetingMode" value="manual">
+                    <span>Manual targeting (always aim at mouse)</span>
+                </label>
+            </div>
+            
             <button id="startBtn">START GAME</button>
         </div>
 
         <div class="controls" id="controlsBar">
             <p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Move &nbsp;|&nbsp;
+               <kbd>Shift</kbd> Shield &nbsp;|&nbsp;
                <kbd>Mouse</kbd> Aim &nbsp;|&nbsp;
                <kbd>Space</kbd> Shoot &nbsp;|&nbsp;
                <kbd>R</kbd> Restart</p>
@@ -39,6 +60,6 @@
         </div>
     </div>
 
-    <script src="game.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
